@@ -310,12 +310,6 @@ func (r *Releaser) CreateReleases() error {
 		return errors.Errorf("No charts found at %s.\n", r.config.PackagePath)
 	}
 
-	worktree, err := r.git.AddWorktree("", r.config.Remote+"/"+r.config.PagesBranch)
-	if err != nil {
-		return err
-	}
-	defer r.git.RemoveWorktree("", worktree) // nolint, errcheck
-
 	for _, p := range packages {
 		ch, err := loader.LoadFile(p)
 		if err != nil {
@@ -347,8 +341,15 @@ func (r *Releaser) CreateReleases() error {
 		if err := r.github.CreateRelease(context.TODO(), release); err != nil {
 			return errors.Wrapf(err, "error creating GitHub release %s", releaseName)
 		}
+	}
 
-		if r.config.PackagesWithIndex {
+	if r.config.PackagesWithIndex {
+		worktree, err := r.git.AddWorktree("", r.config.Remote+"/"+r.config.PagesBranch)
+		if err != nil {
+			return err
+		}
+		defer r.git.RemoveWorktree("", worktree) // nolint, errcheck
+		for _, p := range packages {
 			pkgTargetPath := filepath.Join(worktree, filepath.Base(p))
 			if err := copyFile(p, pkgTargetPath); err != nil {
 				return err
@@ -357,14 +358,13 @@ func (r *Releaser) CreateReleases() error {
 			if err := r.git.Add(worktree, pkgTargetPath); err != nil {
 				return err
 			}
+		}
+		if err := r.git.Commit(worktree, fmt.Sprintf("Publishing chart packages")); err != nil {
+			return err
+		}
 
-			if err := r.git.Commit(worktree, fmt.Sprintf("Publishing chart package for %s", releaseName)); err != nil {
-				return err
-			}
-
-			if err := r.pushToPagesBranch(worktree); err != nil {
-				return err
-			}
+		if err := r.pushToPagesBranch(worktree); err != nil {
+			return err
 		}
 	}
 
