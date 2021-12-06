@@ -17,10 +17,10 @@ package cmd
 import (
 	"path/filepath"
 
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/packager"
 	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
-	"github.com/stecky/yet-another-chart-releaser/pkg/packager"
 )
 
 // packageCmd represents the package command

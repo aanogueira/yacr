@@ -1,4 +1,4 @@
-module github.com/stecky/yet-another-chart-releaser
+module github.com/aanogueira/yet-another-chart-releaser
 
 go 1.15
 

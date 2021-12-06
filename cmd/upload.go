@@ -15,11 +15,11 @@
 package cmd
 
 import (
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/git"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/github"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/releaser"
 	"github.com/spf13/cobra"
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
-	"github.com/stecky/yet-another-chart-releaser/pkg/git"
-	"github.com/stecky/yet-another-chart-releaser/pkg/github"
-	"github.com/stecky/yet-another-chart-releaser/pkg/releaser"
 )
 
 // uploadCmd represents the upload command

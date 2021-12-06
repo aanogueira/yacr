@@ -24,13 +24,13 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/github"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/github"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"helm.sh/helm/v3/pkg/provenance"
 	"helm.sh/helm/v3/pkg/repo"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
 )
 
 type FakeGitHub struct {

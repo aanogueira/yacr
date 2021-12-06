@@ -13,9 +13,9 @@ builds:
       - windows
     ldflags:
       - >-
-        -X github.com/stecky/yacr/cmd.Version={{ .Tag }}
-        -X github.com/stecky/yacr/cmd.GitCommit={{ .Commit }}
-        -X github.com/stecky/yacr/cmd.BuildDate={{ .Date }}
+        -X github.com/aanogueira/yacr/cmd.Version={{ .Tag }}
+        -X github.com/aanogueira/yacr/cmd.GitCommit={{ .Commit }}
+        -X github.com/aanogueira/yacr/cmd.BuildDate={{ .Date }}
 archives:
   - format_overrides:
       - goos: windows
@@ -35,24 +35,24 @@ dockers:
     skip_push: false
     dockerfile: Dockerfile
     image_templates:
-      - stecky/yacr:{{ .Tag }}
-      - stecky/yacr:latest
+      - aanogueira/yacr:{{ .Tag }}
+      - aanogueira/yacr:latest
     build_flag_templates:
       - --label=org.label-schema.schema-version=1.0
       - --label=org.label-schema.version={{ .Version }}
       - --label=org.label-schema.name={{ .ProjectName }}
       - --label=org.label-schema.build-date={{ .Date }}
       - --label=org.label-schema.description='yacr - Yet Another Helm Chart Releaser'
-      - --label=org.label-schema.vendor=stecky
+      - --label=org.label-schema.vendor=aanogueira
 brews:
   - tap:
-      owner: stecky
+      owner: aanogueira
       name: homebrew-tap
     commit_author:
-      name: stecky
-      email: stecky@users.noreply.github.com
+      name: aanogueira
+      email: aanogueira@users.noreply.github.com
     folder: Formula
-    homepage: https://github.com/stecky/yet-another-chart-releaser/
+    homepage: https://github.com/aanogueira/yacr/
     description: Yet Another Helm Chart Releaser
     install: |
       bin.install "yacr"

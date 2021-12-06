@@ -36,12 +36,12 @@ import (
 	"github.com/pkg/errors"
 	"helm.sh/helm/v3/pkg/chart/loader"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
 
 	"helm.sh/helm/v3/pkg/provenance"
 	"helm.sh/helm/v3/pkg/repo"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/github"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/github"
 )
 
 // GitHub contains the functions necessary for interacting with GitHub release

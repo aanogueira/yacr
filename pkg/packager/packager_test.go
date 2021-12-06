@@ -23,7 +23,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
 )
 
 func TestPackager_CreatePackages(t *testing.T) {

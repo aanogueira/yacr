@@ -24,7 +24,7 @@ import (
 	"helm.sh/helm/v3/pkg/downloader"
 	"helm.sh/helm/v3/pkg/getter"
 
-	"github.com/stecky/yet-another-chart-releaser/pkg/config"
+	"github.com/aanogueira/yet-another-chart-releaser/pkg/config"
 	"helm.sh/helm/v3/pkg/action"
 )
 

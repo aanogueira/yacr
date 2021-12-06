@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/stecky/yet-another-chart-releaser/blob/main/.github/yacr_logo.png" alt="yacr - Chart Releaser">
+  <img src="https://github.com/aanogueira/yet-another-chart-releaser/blob/main/.github/yacr_logo.png" alt="yacr - Chart Releaser">
   <br>
   Yet Another Helm Chart Releaser
 </h1>
@@ -9,19 +9,19 @@
     <a href="https://opensource.org/licenses/Apache-2.0">
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"
          alt="License"/></a>
-    <a href="https://goreportcard.com/report/github.com/stecky/yet-another-chart-releaser">
-    <img src="https://goreportcard.com/badge/github.com/stecky/yet-another-chart-releaser"
+    <a href="https://goreportcard.com/report/github.com/aanogueira/yet-another-chart-releaser">
+    <img src="https://goreportcard.com/badge/github.com/aanogueira/yet-another-chart-releaser"
          alt="Go Report Card"/></a>
-    <a href="https://github.com/stecky/yet-another-chart-releaser/commits/main">
+    <a href="https://github.com/aanogueira/yet-another-chart-releaser/commits/main">
     <img src="https://img.shields.io/github/last-commit/stecky/yet-another-chart-releaser.svg?style=plasticr"
          alt="Last commit"/></a>
-    <a href="https://github.com/stecky/yet-another-chart-releaser/issues">
+    <a href="https://github.com/aanogueira/yet-another-chart-releaser/issues">
     <img src="https://img.shields.io/github/issues-raw/stecky/yet-another-chart-releaser.svg?style=plasticr"
          alt="Issues"/></a>
-    <a href="https://github.com/stecky/yet-another-chart-releaser/pulls">
+    <a href="https://github.com/aanogueira/yet-another-chart-releaser/pulls">
     <img src="https://img.shields.io/github/issues-pr-raw/stecky/yet-another-chart-releaser.svg?style=plasticr"
          alt="Pull Requests"/></a>
-    <a href="https://github.com/stecky/yet-another-chart-releaser/stargazers">
+    <a href="https://github.com/aanogueira/yet-another-chart-releaser/stargazers">
     <img src="https://img.shields.io/github/stars/stecky/yet-another-chart-releaser.svg?style=plasticr"
         alt="Stars"/></a>
     <a href="https://www.buymeacoffee.com/stecky">
@@ -32,7 +32,7 @@
 <p><font size="3">
 <strong>yacr</strong> (pronounced like <em><a href="https://en.wiktionary.org/wiki/yacker">yacker</a></em>) is a tool designed to help GitHub repos self-host their own chart repos by adding Helm chart artifacts to GitHub Releases named for the chart version and then creating an `index.yaml` file for those releases that can be hosted on GitHub Pages (or elsewhere!).</font></p>
 
-<p><font size="2">This repo is for the <a href="https://en.wikipedia.org/wiki/Command-line_interface">cli</a> tool itself. If you are looking for a <a href="https://docs.github.com/en/actions">GitHub Action</a> to add this tool to your workflow, it can be found at <a href="https://github.com/stecky/yet-another-chart-releaser-action">stecky/yet-another-chart-releaser-action</a> or on the <a href="https://github.com/marketplace/actions/helm-chart-releaser">GitHub Marketplace</a></font></p>
+<p><font size="2">This repo is for the <a href="https://en.wikipedia.org/wiki/Command-line_interface">cli</a> tool itself. If you are looking for a <a href="https://docs.github.com/en/actions">GitHub Action</a> to add this tool to your workflow, it can be found at <a href="https://github.com/aanogueira/yet-another-chart-releaser-action">stecky/yet-another-chart-releaser-action</a> or on the <a href="https://github.com/marketplace/actions/helm-chart-releaser">GitHub Marketplace</a></font></p>
 
 <div align="center">
   <h2>
@@ -50,12 +50,12 @@
 
 ### Binaries (recommended)
 
-Download your preferred asset from the [releases page](https://github.com/stecky/yet-another-chart-releaser/releases) and install manually.
+Download your preferred asset from the [releases page](https://github.com/aanogueira/yet-another-chart-releaser/releases) and install manually.
 
 ### Homebrew
 
 ```console
-$ brew tap stecky/tap
+$ brew tap aanogueira/tap
 $ brew install yet-another-chart-releaser
 ```
 
@@ -63,7 +63,7 @@ $ brew install yet-another-chart-releaser
 
 ```console
 $ # clone repo to some directory outside GOPATH
-$ git clone https://github.com/stecky/yet-another-chart-releaser
+$ git clone https://github.com/aanogueira/yacr
 $ cd yet-another-chart-releaser
 $ go mod download
 $ go install ./...
