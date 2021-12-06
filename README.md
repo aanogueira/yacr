@@ -52,12 +52,12 @@
 
 Download your preferred asset from the [releases page](https://github.com/aanogueira/yet-another-chart-releaser/releases) and install manually.
 
-### Homebrew
+<!-- ### Homebrew
 
 ```console
 $ brew tap aanogueira/tap
 $ brew install yet-another-chart-releaser
-```
+``` -->
 
 ### Go get (for contributing)
 
